@@ -5,11 +5,9 @@ db = sqlite3.connect("data/student_db")
 cursor = db.cursor()
 
 # Create the pyton_programing table
-cursor.execute('''
-      CREATE TABLE python_programming (id INTEGER PRIMARY KEY, name TEXT,
-              grade INTEGER)
-''')
-db.commit()
+#cursor.execute('''
+      #CREATE TABLE python_programming (id INTEGER PRIMARY KEY, name TEXT,
+              #grade INTEGER)
 
 # Insert the following rows into the Python_Programming table 
 rows_to_insert = [
@@ -20,7 +18,10 @@ rows_to_insert = [
       (2, 'Lucas Brooke', 99)
 ]
 
-#cursor.executemany("INSERT INTO python_programming VALUES(?, ?, ?)", row_to_insert)
+cursor.executemany("INSERT INTO python_programming VALUES(?, ?, ?)", row_to_insert)
+
+# Commit the inserted rows
+db.commit()
 
 # Select all records from 60 and 80
 cursor.execute("SELECT *  FROM python_programming WHERE grade BETWEEN 60 AND 80")
