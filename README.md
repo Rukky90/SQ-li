@@ -39,4 +39,5 @@ Open a terminal and navigate to the project directory
 
 ## Credit 
 
-This project is created by Rukky Benny. It is intended for educaational purposes to demostrate basic SQLITE operations using python.
+Rukky Benny.
+ It is intended for educaational purposes to demostrate basic SQLITE operations using python.
